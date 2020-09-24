@@ -24,12 +24,11 @@ module.exports = {
   //   sourceMap: false,
   //   loaderOptions: {
   //     // 给 scss-loader 传递选项
-  //     scss: {
   //       // 注入 `sass` 的 `mixin` `variables` 到全局, $cdn可以配置图片cdn
   //       // 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
   //       prependData: `
-  //       @import "assets/css/mixin.scss";
-  //       @import "assets/css/variables.scss";
+  //       @import "~@/assets/css/mixin.scss";
+  //       @import "~@/assets/css/variables.scss";
   //       $cdn: "${defaultSettings.$cdn}";
   //        `,
   //     },
