@@ -14,7 +14,7 @@ import 'lib-flexible/flexible.js'
 import { $cdn } from '@/config';
 Vue.prototype.$cdn = $cdn;
 
-Vue.config.productionTip = false;
+Vue.config.productionTaip = false;
 
 new Vue({
   router,
