@@ -7,7 +7,7 @@
       <router-view v-else></router-view>
     </section>
     <footer>
-      <BottomNav :data="tabbars"/>
+      <BottomNav :data="tabbars" @change="changeValue()"/>
     </footer>
   </div>
 </template>
@@ -46,6 +46,11 @@ export default {
       ]
     }
   },
+  methods:{
+    changeValue(value){
+      console.log(value)
+    }
+  }
 }
 </script>
 
