@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <footer class="footer" v-if="isShowTabs">
     <van-tabbar fixed route v-model="active" @change="handleChange">
       <van-tabbar-item
         v-for="(item, index) in data"
@@ -9,7 +9,7 @@
         >{{ item.title }}</van-tabbar-item
       >
     </van-tabbar>
-  </div>
+  </footer>
 </template>
 <script>
 export default {
@@ -28,12 +28,36 @@ export default {
   },
   data() {
     return {
-      active: this.defaultActive
+      active: this.defaultActive,
+      isShowTabs: true
     };
   },
   methods: {
     handleChange(value) {
       this.$emit("change", value);
+    }
+  },
+  watch: {
+    $route: {
+      handler: function() {
+        // console.log(this.$route);
+        const arr = ["Home", "Player", "Collection"];
+        // if (
+        //   this.$route.name !== "Home" ||
+        //   this.$route.name !== "Player" ||
+        //   this.$route.name !== "Collection"
+        // ) {
+        //   this.isShowTabs = false;
+        // }
+        // if (!arr.includes(this.$route.name)) {
+        //   this.isShowTabs = false;
+        // } else {
+        //   this.isShowTabs = true;
+        // }
+        this.isShowTabs = arr.includes(this.$route.name) ? true : false
+      },
+      deep: true,
+      immediate: true
     }
   }
 };

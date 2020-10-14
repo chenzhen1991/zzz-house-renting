@@ -6,54 +6,51 @@
       </keep-alive>
       <router-view v-else></router-view>
     </section>
-    <footer>
-      <BottomNav :data="tabbars" @change="changeValue()"/>
-    </footer>
+    <BottomNav v-if="isShowTabs" :data="tabbars" @change="changeValue()" />
   </div>
 </template>
 
 <script>
-import BottomNav from '@/components/BottomNav'
+import BottomNav from "@/components/BottomNav";
 export default {
   name: "index",
   components: {
     BottomNav
   },
   data() {
-    return{
-      tabbars:[
+    return {
+      tabbars: [
         {
-          title: '首页',
+          title: "首页",
           to: {
-            name: 'Home'
+            name: "Home"
           },
-          icon: 'wap-home'
+          icon: "wap-home"
         },
         {
-          title: '球员',
+          title: "球员",
           to: {
-            name: 'Player'
+            name: "Player"
           },
-          icon: 'manager'
+          icon: "manager"
         },
         {
-          title: '集锦',
+          title: "集锦",
           to: {
-            name: 'Collection'
+            name: "Collection"
           },
-          icon: 'video'
+          icon: "video"
         }
-      ]
+      ],
+      isShowTabs: true
+    };
+  },
+  methods: {
+    changeValue(value) {
+      console.log(value);
     }
   },
-  methods:{
-    changeValue(value){
-      console.log(value)
-    }
-  }
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

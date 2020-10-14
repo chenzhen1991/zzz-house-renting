@@ -46,7 +46,7 @@
       </van-tab>
       <van-tab title="队伍二"
         ><div class="teams">
-          <h5>队伍一<span>（队长：郝鑫）</span></h5>
+          <h5>队伍二<span>（队长：腿哥）</span></h5>
           <div class="table">
             <ul>
               <li class="title">
@@ -75,7 +75,7 @@
         <div class="games content">
           <div class="item">
             <div class="date">2020年10月23日</div>
-            <div class="detail">
+            <div class="detail" @click="gotoDetail()">
               <div class="team team-one">
                 <img
                   src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
@@ -102,7 +102,7 @@
           </div>
           <div class="item">
             <div class="date">2020年10月23日</div>
-            <div class="detail">
+            <div class="detail" @click="gotoDetail()">
               <div class="team team-one">
                 <img
                   src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
@@ -135,6 +135,11 @@ export default {
   name: "DetailTabs",
   data() {
     return {};
+  },
+  methods: {
+    gotoDetail() {
+      this.$router.push({ name: "Games" });
+    }
   }
 };
 </script>

@@ -13,28 +13,22 @@ export const constantRouterMap = [
         name: "Home",
         component: () => import("@/views/home/index"),
         mate: {
-          title: "首页",
           keepAlive: false
         },
-        children: [
-
-        ]
       },
       {
         path: "/home/games",
         name: "GamesDetail",
         component: () => import("@/views/homeDetail/index"),
         mate: {
-          title: "比赛详情",
           keepAlive: false
         }
       },
       {
-        path: "/games/detail",
+        path: "/home/games/detail",
         name: "Games",
         component: () => import("@/views/gamesDetail/index"),
         mate: {
-          title: "比赛详情",
           keepAlive: false
         }
       },
@@ -43,7 +37,6 @@ export const constantRouterMap = [
         name: "Player",
         component: () => import("@/views/player/index"),
         mate: {
-          title: "球员",
           keepAlive: false
         }
       },
@@ -52,7 +45,7 @@ export const constantRouterMap = [
         name: "Collection",
         component: () => import("@/views/collection/index"),
         mate: {
-          title: "集锦",
+          // title: "集锦", // 做页面的导航栏的时候就可以用
           keepAlive: false
         }
       }

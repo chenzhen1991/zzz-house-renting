@@ -61,6 +61,7 @@ export default {
     padding: 0px 20px;
     box-sizing: border-box;
     background-color: white;
+    height: 180px;
     .van-swipe-item {
       width: 100%;
       img {
