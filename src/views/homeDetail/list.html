@@ -60,4 +60,13 @@
     </div>
 </div>
 </body>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $.ajax({
+        url:'http://tp5.luluct.cn/basketball/wab/matchListApi',
+        method:'get'
+    }).done(function(r){
+        console.log(r)
+    })
+</script>
 </html>

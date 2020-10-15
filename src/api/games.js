@@ -6,7 +6,9 @@ import request from "@/utils/request";
 export function games() {
   return request({
     url: api.Games,
-    method: "get"
+    method: "get",
+    hideloading: true
+    // params:{id}
   });
 }
 export function gameDetail(id) {

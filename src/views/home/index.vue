@@ -32,6 +32,7 @@
 
 <script>
 import { games } from "../../api/games";
+import axios from "axios";
 export default {
   name: "index",
   data() {
@@ -51,9 +52,14 @@ export default {
           this.games.push({
             year: item.substring(1, item.length),
             children: res.data[item]
-          })
+          });
         }
       }
+      // axios
+      //   .get("http://tp5.luluct.cn/basketball/wab/matchListApi")
+      //   .then(res => {
+      //     console.log(res);
+      //   });
     },
     goToDetail(id) {
       this.$router.push({ name: "GamesDetail", query: { gamesId: id } });

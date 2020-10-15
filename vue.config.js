@@ -36,14 +36,14 @@ module.exports = {
     //     }
     //   }
     // }
-    proxy: {
-      //配置跨域
-      "/wab": {
-        target: "http://tp5.luluct.cn/basketball", // 接口的域名
-        // ws: true, // 是否启用websockets
-        changOrigin: true, // 开启代理，在本地创建一个虚拟服务端
-      }
-    }
+    // proxy: {
+    //   //配置跨域
+    //   "/wab": {
+    //     target: "http://tp5.luluct.cn/basketball", // 接口的域名
+    //     // ws: true, // 是否启用websockets
+    //     changOrigin: true, // 开启代理，在本地创建一个虚拟服务端
+    //   }
+    // }
   },
   css: {
     extract: IS_PROD, // 是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。

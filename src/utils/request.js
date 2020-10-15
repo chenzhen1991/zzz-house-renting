@@ -6,8 +6,8 @@ import { baseApi } from "@/config";
 // 创建一个axios实例
 const service = axios.create({
   baseURL: baseApi,
-  withCredentials: true, // send cookies when cross-domain requests
-  timeout: 5000 // request timeout
+  // withCredentials: true, // send cookies when cross-domain requests
+  timeout: 5000,// request timeout
 });
 
 // request拦截器 request interceptor
@@ -20,9 +20,9 @@ service.interceptors.request.use(
         forbidClick: true
       });
     }
-    if (store.getters.token) {
-      config.headers["X_Token"] = "";
-    }
+    // if (store.getters.token) {
+    //   config.headers["X_Token"] = "";
+    // }
     return config;
   },
   error => {
