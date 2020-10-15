@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+</head>
+<style>
+    .detail {
+        background-color: #ebedf0;
+    }
+    .detail ul{
+        padding: 0px;
+        margin: 0px;
+    }
+    .detail h4{
+        font-size: 20px;
+        line-height: 50px;
+        border-bottom: 1px solid #ccc;
+        margin: 0px;
+        font-weight: normal;
+        padding-left: 20px;
+    }
+    .detail .img{
+        width: 50px;
+        height: 50px;
+        display: block;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+    .detail .item{
+        margin-bottom: 12px;
+        background-color: white;
+        padding: 15px 0px;
+    }
+    .detail .item .battle-name{
+        font-size: 20px;
+        line-height: 50px;
+        color: #333;
+        text-align: center;
+    }
+    .detail .item .battle-games{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    .detail .item .battle-games div{
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+        line-height: 30px;
+    }
+    .detail .item .battle-games .title{
+        font-size: 14px;
+    }
+    .detail .item .sub-title{
+        font-size: 18px;
+        color: #666;
+        line-height: 70px;
+        padding-left: 20px;
+    }
+    .detail .item .battle{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    .detail .item .battle .slider-title{
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+    .detail .item .battle .slider{
+        height: 2px;
+        width: 180px;
+        background-color: darkblue;
+        border-radius: 5px;
+    }
+    .detail .item .battle img{
+        width: 30px;
+        height: 30px;
+        display: block;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        margin: 10px auto;
+    }
+    .detail .item .battle span{
+        font-size: 15px;
+        color: #333;
+        text-align: center;
+        line-height: 30px;
+    }
+    .detail .item .battle .tags{
+        padding: 5px;
+        text-align: center;
+        background-color: darkblue;
+        margin: 2px;
+        color: white;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .detail .item .battle .fail{
+        background-color: darkred;
+    }
+    .detail .item li{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 30px;
+        font-size: 15px;
+        line-height: 50px;
+    }
+    .detail .item li img{
+        margin: 0px 4px 10px 4px;
+    }
+
+</style>
+<body>
+<div class="detail">
+    <div class="title item">
+        <div class="battle-name">湖人 VS 掘金</div>
+        <div class="battle-games">
+            <div class="team team-one">
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                        class="img"
+                />
+                <span>队伍一</span>
+            </div>
+            <div class="team team-detail">
+                <div class="title">视频直播 NBA 季后赛</div>
+                <div class="time">9月25日 09:00</div>
+            </div>
+            <div class="team team-two">
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                        class="img"
+                />
+                <span>队伍二</span>
+            </div>
+        </div>
+    </div>
+    <div class="data item">
+        <h4>数据</h4>
+        <div class="sub-title">近期交手</div>
+        <div class="battle">
+            <div>
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                />
+                <span>队伍一</span>
+            </div>
+            <div>
+                <div class="slider-title">4胜</div>
+                <div class="slider"></div>
+            </div>
+            <div>
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                />
+                <span>队伍二</span>
+            </div>
+        </div>
+        <div>
+            <div class="sub-title">近期战绩</div>
+            <div class="battle">
+                <div class="left">
+                    <span class="tags">胜</span>
+                    <span class="tags">胜</span>
+                    <span class="tags">胜</span>
+                    <span class="tags">胜</span>
+                    <span class="tags">胜</span>
+                </div>
+                <div class="right">
+                    <span class="tags fail">负</span>
+                    <span class="tags fail">负</span>
+                    <span class="tags">胜</span>
+                    <span class="tags">胜</span>
+                    <span class="tags">胜</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="future-games item">
+        <h4>未来场次</h4>
+        <ul>
+            <li>
+                <div>湖人</div>
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                        class="img"
+                />
+                <div>9月23日 09:00</div>
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                        class="img"
+                />
+                <div>掘金</div>
+            </li>
+            <li>
+                <div>湖人</div>
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                        class="img"
+                />
+                <div>9月23日 09:00</div>
+                <img
+                        src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                        alt=""
+                        class="img"
+                />
+                <div>掘金</div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

@@ -6,7 +6,7 @@
       </keep-alive>
       <router-view v-else></router-view>
     </section>
-    <BottomNav v-if="isShowTabs" :data="tabbars" @change="changeValue()" />
+    <BottomNav :data="tabbars" @change="changeValue()" />
   </div>
 </template>
 
@@ -42,7 +42,6 @@ export default {
           icon: "video"
         }
       ],
-      isShowTabs: true
     };
   },
   methods: {

@@ -41,6 +41,14 @@ export const constantRouterMap = [
         }
       },
       {
+        path: "/player/detail",
+        name: "PlayerDetail",
+        component: () => import("@/views/playerDetail/index"),
+        mate: {
+          keepAlive: false
+        }
+      },
+      {
         path: "/collection",
         name: "Collection",
         component: () => import("@/views/collection/index"),

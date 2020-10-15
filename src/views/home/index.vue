@@ -6,7 +6,7 @@
     />
     <div class="year-item" v-for="item in games" :key="item.id">
       <div class="title">
-        <van-icon name="plus" color="red" class="plus" />{{ item.title }}
+        <van-icon name="plus" color="red" class="plus" />{{ item.year }}
       </div>
       <ul>
         <li
@@ -16,13 +16,13 @@
         >
           <div class="title">{{ itemChild.title }}</div>
           <div class="list start-time">
-            开始时间：<span>{{ itemChild.startTime }}</span>
+            开始时间：<span>{{ itemChild.date_start }}</span>
           </div>
           <div class="list start-time">
-            开始时间：<span>{{ itemChild.endTime }}</span>
+            开始时间：<span>{{ itemChild.date_end }}</span>
           </div>
-          <div class="list project" v-if="itemChild.projects">
-            {{ itemChild.projects }}
+          <div class="list project" v-if="itemChild.intro">
+            {{ itemChild.intro }}
           </div>
         </li>
       </ul>
@@ -45,7 +45,15 @@ export default {
   methods: {
     async getYearGames() {
       const res = await games();
-      this.games = res;
+      if (res && res.code == 200) {
+        this.games = [];
+        for (let item in res.data) {
+          this.games.push({
+            year: item.substring(1, item.length),
+            children: res.data[item]
+          })
+        }
+      }
     },
     goToDetail(id) {
       this.$router.push({ name: "GamesDetail", query: { gamesId: id } });

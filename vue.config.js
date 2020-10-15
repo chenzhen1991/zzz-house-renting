@@ -25,15 +25,23 @@ module.exports = {
       warnings: false,
       errors: true
     },
+    // proxy: {
+    //   //配置跨域
+    //   "/api": {
+    //     target: "http://127.0.0.1:7001", // 接口的域名
+    //     // ws: true, // 是否启用websockets
+    //     changOrigin: true, // 开启代理，在本地创建一个虚拟服务端
+    //     pathRewrite: {
+    //       "^/api": "/"
+    //     }
+    //   }
+    // }
     proxy: {
       //配置跨域
-      "/api": {
-        target: "http://127.0.0.1:7001", // 接口的域名
+      "/wab": {
+        target: "http://tp5.luluct.cn/basketball", // 接口的域名
         // ws: true, // 是否启用websockets
         changOrigin: true, // 开启代理，在本地创建一个虚拟服务端
-        pathRewrite: {
-          "^/api": "/"
-        }
       }
     }
   },

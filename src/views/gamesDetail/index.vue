@@ -7,6 +7,7 @@
           <img
             src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
             alt=""
+            class="img"
           />
           <span>队伍一</span>
         </div>
@@ -18,6 +19,7 @@
           <img
             src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
             alt=""
+            class="img"
           />
           <span>队伍二</span>
         </div>
@@ -74,11 +76,13 @@
           <img
             src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
             alt=""
+            class="img"
           />
           <div>9月23日 09:00</div>
           <img
             src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
             alt=""
+            class="img"
           />
           <div>掘金</div>
         </li>
@@ -87,11 +91,13 @@
           <img
             src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
             alt=""
+            class="img"
           />
           <div>9月23日 09:00</div>
           <img
             src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
             alt=""
+            class="img"
           />
           <div>掘金</div>
         </li>
@@ -114,7 +120,6 @@ export default {
 <style scoped lang="scss">
 .detail {
   background-color: #ebedf0;
-  padding-bottom: 100px;
   h4 {
     font-size: 20px;
     line-height: 50px;
@@ -122,6 +127,13 @@ export default {
     margin: 0px;
     font-weight: normal;
     padding-left: 20px;
+  }
+  .img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 25px;
+    margin-bottom: 10px;
   }
   .item {
     margin-bottom: 12px;
@@ -137,13 +149,6 @@ export default {
       display: flex;
       justify-content: space-between;
       padding: 0px 20px;
-      img {
-        width: 50px;
-        height: 50px;
-        display: block;
-        border-radius: 25px;
-        margin-bottom: 10px;
-      }
       div {
         font-size: 18px;
         color: #333;
@@ -183,7 +188,7 @@ export default {
         margin: 10px auto;
       }
       span{
-        font-size: 18px;
+        font-size: 15px;
         color: #333;
         text-align: center;
         line-height: 30px;
@@ -207,13 +212,6 @@ export default {
       padding: 15px 30px;
       font-size: 15px;
       line-height: 50px;
-      img {
-        width: 50px;
-        height: 50px;
-        display: block;
-        border-radius: 25px;
-        margin: 0px 4px 10px 4px;
-      }
     }
   }
 }

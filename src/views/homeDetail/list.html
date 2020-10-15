@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Title</title>
+</head>
+<style>
+    .games .date{
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        color: #333;
+        background-color: rgba(235, 237, 240, 0.39);
+    }
+    .games .detail{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .games .detail .team{
+        text-align: center;
+    }
+    .games .detail .team img{
+        width: 50px;
+        height: 50px;
+        display: block;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+    .games .detail .team span{
+        font-size: 18px;
+        color: #333;
+    }
+</style>
+<body>
+<div class="games item">
+    <div class="date">2020年10月23日</div>
+    <div class="detail" @click="gotoDetail()">
+        <div class="team team-one">
+            <img
+                    src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                    alt=""
+            />
+            <span>队伍一</span>
+        </div>
+        <div class="team team-detail">
+            <div class="title">NBA 季后赛</div>
+            <div class="time">09:00</div>
+            <div class="type">视频直播</div>
+        </div>
+        <div class="team team-two">
+            <img
+                    src="http://tp5.luluct.cn/static/basketball/images/default_img.jpg"
+                    alt=""
+            />
+            <span>队伍二</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

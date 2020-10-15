@@ -1,39 +1,43 @@
 <template>
   <div class="players-container">
-    <div class="item" v-for="item in players" :key="item.id">
-      <img class="img" :src="item.headPic" />
+    <div
+      class="item"
+      v-for="item in players"
+      :key="item.id"
+      @click="gotoPlayerDetail(item.id)"
+    >
+      <img class="img" :src="item.head_img | headerImg" />
       <div class="content">
         <div class="head">
           <span class="title">{{ item.name }}</span>
-          <span v-for="itempos in item.position" :key="itempos"
-            >{{ itempos }}/</span
-          >
+          <span>{{ item.position }}/</span>
         </div>
         <div class="num">
           <div class="title">号码：</div>
-          <span>{{ item.num | numMark }}</span>
+          <span>{{ item.jersey }}</span>
         </div>
         <div class="good">
           <div class="title">擅长：</div>
           <div class="goods-list">
-            <span v-for="itemChild in item.good" :key="itemChild">{{
-                itemChild
-              }}</span>
+            <span v-for="itemChild in item.specialty_list" :key="itemChild">{{
+              itemChild
+            }}</span>
           </div>
         </div>
-        <div class="slogan" v-if="item.slogan">{{ item.slogan }}</div>
+        <div class="slogan" v-if="item.intro">{{ item.intro }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { ImageUrl } from "@/config";
 import { players } from "../../api/players";
 export default {
   name: "index",
   filters: {
-    numMark: val => {
-      return val + "号";
+    headerImg: val => {
+      return ImageUrl + val;
     }
   },
   data() {
@@ -47,7 +51,15 @@ export default {
   methods: {
     async getPlayers() {
       let res = await players();
-      this.players = res;
+      if (res && res.code == 200) {
+        this.players = res.data;
+      }
+    },
+    gotoPlayerDetail(value) {
+      this.$router.push({
+        name: "PlayerDetail",
+        query: { playerId: value }
+      });
     }
   }
 };

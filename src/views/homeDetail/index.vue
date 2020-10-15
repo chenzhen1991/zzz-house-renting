@@ -19,6 +19,7 @@
 <script>
 import DetailTabs from "@/components/DetailTabs";
 import DetailGamesCollection from "@/components/DetailGamesCollection";
+import { gameDetail } from "../../api/games";
 export default {
   name: "index",
   data() {
@@ -33,6 +34,16 @@ export default {
   components: {
     DetailTabs,
     DetailGamesCollection
+  },
+  mounted() {
+    this.getGamesDeail();
+  },
+  methods: {
+    async getGamesDeail() {
+      const gameId = this.$route.query.gameId;
+      let res = await gameDetail(gameId);
+      console.log(res);
+    }
   }
 };
 </script>

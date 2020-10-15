@@ -54,7 +54,8 @@ export default {
         // } else {
         //   this.isShowTabs = true;
         // }
-        this.isShowTabs = arr.includes(this.$route.name) ? true : false
+        this.isShowTabs = arr.includes(this.$route.name) ? true : false;
+        console.log(this.isShowTabs);
       },
       deep: true,
       immediate: true
@@ -62,4 +63,8 @@ export default {
   }
 };
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+footer {
+  z-index: 1;
+}
+</style>
