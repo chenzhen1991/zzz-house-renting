@@ -6,7 +6,7 @@
       :key="item.id"
       @click="gotoPlayerDetail(item.id)"
     >
-      <img class="img" :src="item.head_img | headerImg" />
+      <img class="img" :src="item.head_img | addUrl" />
       <div class="content">
         <div class="head">
           <span class="title">{{ item.name }}</span>
@@ -31,15 +31,9 @@
 </template>
 
 <script>
-import { ImageUrl } from "@/config";
 import { players } from "../../api/players";
 export default {
   name: "index",
-  filters: {
-    headerImg: val => {
-      return ImageUrl + val;
-    }
-  },
   data() {
     return {
       players: []
