@@ -1,1 +1,13 @@
 /*全局通用样式*/
+.common-btn{
+  background: linear-gradient(45deg, #0f73ee, #c644fc);
+  color: white;
+  border-radius: 5px;
+}
+h3 {
+  color: $color;
+  font-size: 30px;
+  text-align: left;
+  line-height: 40px;
+  padding-top: 50px;
+}
