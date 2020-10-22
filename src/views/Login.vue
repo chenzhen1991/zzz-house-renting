@@ -1,7 +1,7 @@
 <template>
-  <div class="login">
+  <div class="account login">
     <h3>你好<br />欢迎回来!</h3>
-    <van-cell-group>
+    <van-form>
       <van-field v-model="name" placeholder="用户名" />
       <div class="pwd-field">
         <van-field v-model="pwd" placeholder="密码" type="password" />
@@ -10,13 +10,14 @@
       <van-button type="default" @click="addAttr" class="login-btn common-btn"
         >登陆</van-button
       >
-    </van-cell-group>
+    </van-form>
     <p>还没有账号?<span>马上注册</span></p>
   </div>
 </template>
 
 <script>
 import hi from "../mixin/test";
+import "../assets/css/account.scss";
 export default {
   name: "Login",
   data() {
@@ -47,13 +48,6 @@ export default {
 
 <style scoped lang="scss">
 .login {
-  padding: 20px;
-  position: relative;
-  .van-cell {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
   .pwd-field {
     position: relative;
     margin-bottom: 40px;
@@ -63,9 +57,6 @@ export default {
       bottom: -25px;
       color: #404b69;
     }
-  }
-  .login-btn{
-    width: 100%;
   }
   p{
     position: fixed;

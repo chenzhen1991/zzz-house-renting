@@ -1,0 +1,29 @@
+.account{
+  padding: 20px;
+  position: relative;
+  .explain{
+    color: #404b69;
+    text-align: left;
+    line-height: 30px;
+    padding-bottom: 40px;
+  }
+  .van-cell {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 28px;
+  }
+  .common-btn{
+    width:100%;
+    background: linear-gradient(45deg, #0f73ee, #c644fc);
+    color: white;
+    border-radius: 5px;
+  }
+  h3 {
+    color: $color;
+    font-size: 30px;
+    text-align: left;
+    line-height: 40px;
+    padding-top: 50px;
+    margin: 0px;
+  }
+}
