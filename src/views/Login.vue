@@ -2,12 +2,12 @@
   <div class="account login">
     <h3>你好<br />欢迎回来!</h3>
     <van-form>
-      <van-field v-model="name" placeholder="用户名" />
+      <van-field v-model="userName" placeholder="用户名" />
       <div class="pwd-field">
-        <van-field v-model="pwd" placeholder="密码" type="password" />
+        <van-field v-model="password" placeholder="密码" type="password" />
         <span>忘记密码?</span>
       </div>
-      <van-button type="default" @click="addAttr" class="login-btn common-btn"
+      <van-button type="default" @click="login" class="login-btn common-btn"
         >登陆</van-button
       >
     </van-form>
@@ -18,25 +18,33 @@
 <script>
 import hi from "../mixin/test";
 import "../assets/css/account.scss";
+import { login, home } from "../api/login";
 export default {
   name: "Login",
   data() {
     return {
-      pwd: "",
+      password: "",
       obj: {
         a: "111"
       },
-      name: ""
+      userName: ""
     };
   },
   methods: {
-    addAttr() {
+    async login() {
       // this.obj.b = '新增加的'
       // console.log(this.obj)
       // this.$set(this.obj, 'b','新增加的')
       // this.$set(this.data, 'b','新增加的')
       // console.log(this.obj)
-      console.log('组件里面的方法')
+      // console.log(this.userName, this.password);
+      // let res = await login({
+      //   userName: this.userName,
+      //   password: this.password
+      // });
+      // console.log(res);
+      let res = await home()
+      console.log(res)
     }
   },
   mounted() {
@@ -58,14 +66,14 @@ export default {
       color: #404b69;
     }
   }
-  p{
+  p {
     position: fixed;
     bottom: 50px;
     font-size: 16px;
     color: #020433;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
-    span{
+    span {
       color: #0f73ee;
     }
   }
