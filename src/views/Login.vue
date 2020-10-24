@@ -5,13 +5,13 @@
       <van-field v-model="userName" placeholder="用户名" />
       <div class="pwd-field">
         <van-field v-model="password" placeholder="密码" type="password" />
-        <span>忘记密码?</span>
+        <span @click="resetPwd">忘记密码?</span>
       </div>
       <van-button type="default" @click="login" class="login-btn common-btn"
         >登陆</van-button
       >
     </van-form>
-    <p>还没有账号?<span>马上注册</span></p>
+    <p>还没有账号?<span @click="register">马上注册</span></p>
   </div>
 </template>
 
@@ -38,13 +38,19 @@ export default {
       // this.$set(this.data, 'b','新增加的')
       // console.log(this.obj)
       // console.log(this.userName, this.password);
-      // let res = await login({
-      //   userName: this.userName,
-      //   password: this.password
-      // });
-      // console.log(res);
-      let res = await home()
-      console.log(res)
+      let res = await login({
+        userName: this.userName,
+        password: this.password
+      });
+      if (res && res.code == 200) {
+        this.$router.push("/step");
+      }
+    },
+    register() {
+      this.$router.push("/register");
+    },
+    resetPwd() {
+      this.$router.push("/forgetPwd");
     }
   },
   mounted() {
@@ -63,7 +69,7 @@ export default {
       position: absolute;
       right: 1px;
       bottom: -25px;
-      color: #404b69;
+      color: $color;
     }
   }
   p {

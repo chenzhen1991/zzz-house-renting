@@ -1,18 +1,19 @@
 <template>
   <div class="step">
     <div class="set">
-      <van-progress percentage="40" />
-      <StepOne />
-      <StepTwo />
-      <StepThree />
-      <StepFour />
-      <StepFive />
+      <RentTabs length="5" />
+<!--      <StepOne />-->
+<!--      <StepTwo />-->
+<!--      <StepThree />-->
+<!--      <StepFour />-->
+<!--      <StepFive />-->
     </div>
-    <EndPage :data="endData"/>
+<!--    <EndPage :data="endData"/>-->
   </div>
 </template>
 
 <script>
+import RentTabs from "components/RentTabs";
 import StepOne from "@/components/StepOne";
 import StepTwo from "@/components/StepTwo";
 import StepThree from "@/components/StepThree";
@@ -32,6 +33,7 @@ export default {
     }
   },
   components: {
+    RentTabs,
     StepOne,
     StepTwo,
     StepThree,

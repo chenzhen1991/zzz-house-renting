@@ -15,7 +15,10 @@ import {
   RadioGroup,
   Radio,
   Form,
-  Uploader } from "vant";
+  Uploader,
+  Tab,
+  Tabs
+} from "vant";
 Vue.use(Button);
 Vue.use(Cell);
 Vue.use(List);
@@ -29,3 +32,5 @@ Vue.use(Form);
 Vue.use(Radio);
 Vue.use(RadioGroup);
 Vue.use(Uploader);
+Vue.use(Tab);
+Vue.use(Tabs);
