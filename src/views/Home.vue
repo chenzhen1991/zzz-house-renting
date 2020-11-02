@@ -1,29 +1,55 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <div v-for="li in list">{{li}}</div>
+<!--    <CheckboxList-->
+<!--      :items="items"-->
+<!--      :checkArr="checkArr"-->
+<!--      @func="onChangeCheck"-->
+<!--    />-->
+<!--    v-model == value onchange-->
+<!--    <CheckboxList-->
+<!--        :items="items"-->
+<!--        v-model="checkArr"-->
+<!--    />-->
+<!--    方法三-->
+        <CheckboxList
+          :items="items"
+          :checkArr.sync="checkArr"
+        />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import CheckboxList from "@/components/CheckboxList";
 export default {
   name: "Home",
   data() {
     return {
-      list: []
-    }
+      items: [
+        {
+          label: "苹果",
+          id: "1"
+        },
+        {
+          label: "栗子",
+          id: "2"
+        },
+        {
+          label: "梨子",
+          id: "3"
+        }
+      ],
+      checkArr: ['1','2']
+    };
   },
   components: {
-
+    CheckboxList
   },
-  mounted() {
-    setTimeout(()=>{
-      for (let i = 0; i < 100000; i++) {
-        this.list.push(i)
-      }
-    },2000)
-
+  methods: {
+    // onChangeCheck(v) {
+    //   console.log(v);
+    //   this.checkArr = v
+    // }
   }
 };
 </script>

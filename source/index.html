@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .pc_in {
+        position: relative;
+        float: left;
+        width: 6.7rem;
+        height: 1.12rem;
+        margin-top: 0.92rem;
+        margin-left: 0.4rem;
+    }
+    .pc_in div {
+        display: flex;
+        width: 100%;
+        height: 1.12rem;
+    }
+    .pc_in span {
+        flex: 1;
+        height: 200%;
+        border: #E6E8ED solid 1px;
+        border-right: none;
+        margin-top: -0.56rem;
+    }
+    .pc_in span:last-child {
+        border-right: #E6E8ED solid 1px;
+    }
+    .pc_in p {
+        position: absolute;
+        width: 7.5rem;
+        height: 1.12rem;
+        line-height: 1.12rem;
+        top: 0;
+        left: 0;
+        background: none;
+        overflow: hidden;
+    }
+    .pc_in input {
+        float: left;
+        width: 120%;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        margin-top: 0.2rem;
+        letter-spacing: 0.9rem;
+        background: none;
+        text-indent: 0.4rem;
+    }
+</style>
+<body>
+<span><div>11111</div></span>|<span><div>11111</div></span>
+
+<div class="pc_in">
+    <div>
+        <span class="g_hx"></span>
+        <span class="g_hx"></span>
+        <span class="g_hx"></span>
+        <span class="g_hx"></span>
+        <span class="g_hx"></span>
+        <span class="g_hx"></span>
+    </div>
+    <p>
+        <input type="text" v-model="paymentCodeValue" maxlength="6" />
+    </p>
+
+</div>
+</body>
+</html>

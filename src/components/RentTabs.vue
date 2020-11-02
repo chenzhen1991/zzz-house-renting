@@ -1,19 +1,5 @@
 <template>
   <div class="tabs">
-<!--    <div class="head">-->
-<!--      <div class="selected"></div>-->
-<!--      <div></div>-->
-<!--      <div></div>-->
-<!--      <div></div>-->
-<!--      <div></div>-->
-<!--    </div>-->
-<!--    <div class="content">-->
-<!--      <div class="active">niha1<slot/></div>-->
-<!--      <div>niha2<slot/></div>-->
-<!--      <div>niha3<slot/></div>-->
-<!--      <div>niha4<slot/></div>-->
-<!--      <div>niha5<slot/></div>-->
-<!--    </div>-->
     <div :style="{width: (1+currentIndex) * 20 + 'vw' }" style="height: 10px;background-color:red;"></div>
     <div v-show="currentIndex === 0">
       0
@@ -30,8 +16,8 @@
     <div v-show="currentIndex === 4">
       4
     </div>
-    <van-button @click="()=>currentIndex--">上一步</van-button>
-    <van-button @click="()=>currentIndex++">下一步</van-button>
+    <van-button @click="()=>currentIndex--">上eeee步</van-button>
+    <van-button @click="()=>currentIndex++">下一33333333步</van-button>
   </div>
 </template>
 

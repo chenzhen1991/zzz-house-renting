@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    html,body{
+        margin: 0;
+    }
+    /*方法一*/
+    .box1{
+        width: 100vw;
+        height: 100vh;
+        background-color: red;
+        position: relative;
+    }
+    .box2{
+        width: 50vw;
+        height: 50vw;
+        background-color: #0f73ee;
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+    }
+
+    /*方法二*/
+    /*.box1{*/
+    /*    width: 100vw;*/
+    /*    height: 100vh;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    background-color: red;*/
+    /*}*/
+    /*.box2{*/
+    /*    width: 50vw;*/
+    /*    height: 50vw;*/
+    /*    background-color: #0f73ee;*/
+    /*}*/
+</style>
+<body>
+<div class="box1">
+<div class="box2"></div>
+</div>
+</body>
+</html>

@@ -7,9 +7,9 @@
         </div>
       </div>
     </div>
-    <div class="info">{{data.info}}</div>
-    <div class="detail">{{data.detail}}</div>
-    <van-button type="default" class="go-login">{{data.btnName}}</van-button>
+    <div class="info">{{ data.info }}</div>
+    <div class="detail">{{ data.detail }}</div>
+    <van-button type="default" class="go-login">{{ data.btnName }}</van-button>
   </div>
 </template>
 
@@ -18,9 +18,9 @@ export default {
   name: "EndPage",
   props: {
     data: {
-      type: Object,
-    },
-  },
+      type: Object
+    }
+  }
 };
 </script>
 
