@@ -72,7 +72,7 @@
           <van-uploader v-model="uploader" />
         </template>
       </van-field>
-      <van-button type="default" class="login-btn common-btn"
+      <van-button type="default" class="login-btn common-btn" @click="selectTarget(4)"
         >下一步</van-button
       >
     </van-form>
@@ -99,7 +99,12 @@ export default {
       comfirmPwd: "",
       uploader: []
     };
-  }
+  },
+  methods: {
+    selectTarget(v) {
+      this.$emit('changeIndex', v)
+    }
+  },
 };
 </script>
 

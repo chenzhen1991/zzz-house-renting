@@ -2,7 +2,7 @@
   <div class="step-two">
     <StepHead title="你想在哪里<br />寻找?" />
     <div class="content">
-      <div class="item" v-for="item in locationArr" :key="item.id">
+      <div class="item" v-for="item in locationArr" :key="item.id" @click="selectTarget(2)">
         <img :src="item.img" alt="" class="img">
         <div class="city">{{ item.city}}</div>
         <div class="country">{{ item.country }}</div>
@@ -46,6 +46,11 @@ export default {
           city:'美国'
         }
       ]
+    }
+  },
+  methods: {
+    selectTarget(v) {
+      this.$emit('changeIndex', v)
     }
   },
 };

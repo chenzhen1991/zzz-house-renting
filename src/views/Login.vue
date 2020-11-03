@@ -18,7 +18,7 @@
 <script>
 import hi from "../mixin/test";
 import "../assets/css/account.scss";
-import { login, home } from "../api/login";
+import { login} from "../api/login";
 export default {
   name: "Login",
   data() {

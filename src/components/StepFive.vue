@@ -2,18 +2,11 @@
   <div class="step-five">
     <StepHead title="验证码" />
     <p class="code-explain">我们给您发了一个接入码<br />请在下面填入</p>
-    <van-cell-group class="code">
-      <van-field v-model="value1" />
-      <van-field v-model="value2" />
-      <van-field v-model="value3" />
-      <van-field v-model="value4" />
-      <van-field v-model="value5" />
-      <van-field v-model="value6" />
-    </van-cell-group>
+    <CheckCode />
     <p>这有助于我们对每个用于进行身份验证</p>
     <div class="resend">没接收到验证码?<span>重新发送</span></div>
     <div class="btn">
-      <van-button type="default" class="common-btn"
+      <van-button type="default" class="common-btn" @click="selectTarget(5)"
       >完成</van-button
       >
     </div>
@@ -22,10 +15,12 @@
 
 <script>
 import StepHead from "./StepHead";
+import CheckCode from "components/CheckCode";
 export default {
   name: "StepFive",
   components: {
-    StepHead
+    StepHead,
+    CheckCode
   },
   data() {
     return {
@@ -36,7 +31,12 @@ export default {
       value5: "",
       value6: ""
     };
-  }
+  },
+  methods: {
+    selectTarget(v) {
+      this.$emit('changeIndex', v)
+    }
+  },
 };
 </script>
 
@@ -48,16 +48,6 @@ export default {
   .code-explain{
     text-align: left;
     padding-left: 30px;
-    span{
-
-    }
-  }
-  .code{
-    padding: 0px 30px;
-    display: flex;
-    .van-cell{
-      margin: 3px;
-    }
   }
   .resend{
     span{
@@ -66,6 +56,7 @@ export default {
   }
   .btn{
     padding: 0px 30px;
+    margin-top: 30px;
   }
 }
 </style>

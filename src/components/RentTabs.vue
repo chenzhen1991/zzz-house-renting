@@ -1,32 +1,22 @@
 <template>
   <div class="tabs">
-    <div :style="{width: (1+currentIndex) * 20 + 'vw' }" style="height: 10px;background-color:red;"></div>
-    <div v-show="currentIndex === 0">
-      0
+    <div :style="{width: (1+currentIndex) * 20 + 'vw' }" style="height: 6px;background:linear-gradient(135deg, #0f73ee, #c644fc);;"></div>
+    <div v-for="(item, index) in slotArr" v-show="currentIndex === index" :key="item">
+      <slot :name="item"/>
     </div>
-    <div v-show="currentIndex === 1">
-      1
-    </div>
-    <div v-show="currentIndex === 2">
-      2
-    </div>
-    <div v-show="currentIndex === 3">
-      3
-    </div>
-    <div v-show="currentIndex === 4">
-      4
-    </div>
-    <van-button @click="()=>currentIndex--">上eeee步</van-button>
-    <van-button @click="()=>currentIndex++">下一33333333步</van-button>
   </div>
 </template>
 
 <script>
 export default {
   name: "Tab",
-  data() {
-    return {
-      currentIndex: 0
+  props: {
+    slotArr: {
+      type: Array,
+    },
+    currentIndex:{
+      type:Number,
+      default:0
     }
   },
 };

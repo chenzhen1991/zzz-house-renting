@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     next() {
-      
+      this.$emit("func", this.code);
     }
   },
 };

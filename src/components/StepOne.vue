@@ -2,7 +2,7 @@
   <div class="step-one">
     <StepHead title="你的寻找目标<br />是什么?"/>
     <div class="content">
-      <div class="item" v-for="item in targetArr" :key="item.id">
+      <div class="item" v-for="item in targetArr" :key="item.id" @click="selectTarget(1)">
         <div class="img">
           <van-icon :name="item.icon" />
           <div>{{ item.text }}</div>
@@ -48,7 +48,12 @@ export default {
         }
       ]
     };
-  }
+  },
+  methods: {
+    selectTarget(v) {
+      this.$emit('changeIndex', v)
+    }
+  },
 };
 </script>
 

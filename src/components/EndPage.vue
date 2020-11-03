@@ -7,9 +7,7 @@
         </div>
       </div>
     </div>
-    <div class="info">{{ data.info }}</div>
-    <div class="detail">{{ data.detail }}</div>
-    <van-button type="default" class="go-login">{{ data.btnName }}</van-button>
+    <slot />
   </div>
 </template>
 
@@ -28,8 +26,8 @@ export default {
 .sus-info {
   background: linear-gradient(135deg, #0f73ee, #c644fc);
   text-align: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding-top: 30px;
   box-sizing: border-box;
   .first {

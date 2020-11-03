@@ -1,10 +1,16 @@
 <template>
-  <div>填写问题</div>
+  <div>
+    <QuestionOne />
+  </div>
 </template>
 
 <script>
+import QuestionOne from "components/question/QuestionOne";
 export default {
-  name: "Question"
+  name: "Question",
+  components:{
+    QuestionOne
+  }
 };
 </script>
 

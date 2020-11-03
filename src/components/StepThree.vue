@@ -14,7 +14,7 @@
       <van-cell title="入住日期" :value="date" @click="show = true" />
       <van-calendar v-model="show" @confirm="onConfirm" />
     </div>
-    <van-button type="default" class="common-btn">下一步</van-button>
+    <van-button type="default" class="common-btn" @click="selectTarget(3)">下一步</van-button>
   </div>
 </template>
 
@@ -44,6 +44,9 @@ export default {
       console.log(date)
       this.date = this.formatDate(date)
     },
+    selectTarget(v) {
+      this.$emit('changeIndex', v)
+    }
   }
 };
 </script>

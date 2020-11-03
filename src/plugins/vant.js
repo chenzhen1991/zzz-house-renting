@@ -17,7 +17,7 @@ import {
   Form,
   Uploader,
   Tab,
-  Tabs
+  Tabs,
 } from "vant";
 Vue.use(Button);
 Vue.use(Cell);

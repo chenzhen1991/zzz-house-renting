@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>塌陷的问题</title>
+</head>
+<style>
+    .box div{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+    .box1{
+        margin-bottom: 40px;
+    }
+    .box2{
+        margin-top: 50px;
+    }
+    /*解决方法1 调整最大值为90
+    *或者外层加一个盒子进行设置
+    */
+    .boxx div{
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+    }
+    .box4{
+        margin-top: 50px;
+    }
+    .box3{
+        margin-bottom: 90px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+<!--要实现两个之间的间距为90-->
+<div class="boxx">
+    <div class="box3"></div>
+    <div class="box4"></div>
+</div>
+</body>
+</html>
