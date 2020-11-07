@@ -18,6 +18,7 @@ import {
   Uploader,
   Tab,
   Tabs,
+  Toast
 } from "vant";
 Vue.use(Button);
 Vue.use(Cell);
@@ -34,3 +35,4 @@ Vue.use(RadioGroup);
 Vue.use(Uploader);
 Vue.use(Tab);
 Vue.use(Tabs);
+Vue.use(Toast);
