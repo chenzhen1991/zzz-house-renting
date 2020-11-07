@@ -1,2 +1,14 @@
 /*全局变量*/
 $color: #020433;
+
+.flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexBox($jc: center, $ai: center){
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}

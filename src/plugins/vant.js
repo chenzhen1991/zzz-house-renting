@@ -18,7 +18,9 @@ import {
   Uploader,
   Tab,
   Tabs,
-  Toast
+  Toast,
+  Swipe, SwipeItem,
+  Lazyload
 } from "vant";
 Vue.use(Button);
 Vue.use(Cell);
@@ -36,3 +38,6 @@ Vue.use(Uploader);
 Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(Toast);
+Vue.use(Swipe);
+Vue.use(SwipeItem);
+Vue.use(Lazyload);

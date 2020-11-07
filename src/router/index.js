@@ -7,9 +7,21 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    component: () => import("../views/Layout"),
+    redirect: "/home",
+    meta: {
+      title: "首页",
+      keepAlive: false
+    },
+    children: [
+      {
+        path: "/",
+        name: "Home",
+        component: Home
+      },
+    ]
   },
+
   {
     path: "/login",
     name: "Login",
@@ -37,20 +49,18 @@ const routes = [
   {
     path: "/step",
     name: "Step",
-    component: () =>
-        import(/* webpackChunkName: "about" */ "../views/Step.vue")
+    component: () => import(/* webpackChunkName: "about" */ "../views/Step.vue")
   },
   {
     path: "/question",
     name: "Question",
     component: () =>
-        import(/* webpackChunkName: "about" */ "../views/Question.vue")
+      import(/* webpackChunkName: "about" */ "../views/Question.vue")
   },
   {
     path: "/demo",
     name: "Demo",
-    component: () =>
-        import(/* webpackChunkName: "about" */ "../views/Demo.vue")
+    component: () => import(/* webpackChunkName: "about" */ "../views/Demo.vue")
   }
 ];
 
